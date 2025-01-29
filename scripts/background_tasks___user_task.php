@@ -78,7 +78,7 @@ for ($i = 0; $i < $number_users_build_cache_tree; $i++) {
 
     // No more pending user_build_cache_tree tasks
     if (DB::count() === 0)
-        exit;
+        break;
 
     // get email properties
     $arguments = json_decode($record['arguments'], true);
